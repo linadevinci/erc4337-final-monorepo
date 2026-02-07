@@ -63,6 +63,9 @@ npm run deploy
 - ✅ Updates frontend with YOUR addresses
 - ✅ Ready to use!
 
+# Expected: Contracts deployed, frontend updated , sometimes contracts are not verified so check manually if deployed, but should be deployed✅
+
+
 ### 5. Run Frontend
 
 ```bash
@@ -132,46 +135,7 @@ npm run dev                # Start frontend
 
 5. **Frontend ready with YOUR addresses!**
 
----
 
-## ✨ Key Features
-
-### Smart Contracts
-
-- Multi-signature (M-of-N)
-- Session keys
-- Social recovery
-- Batch execution
-- Gas sponsorship (paymaster)
-- UUPS upgradeable
-
-### Frontend
-
-- MetaMask integration
-- Account creation
-- NFT minting (single & batch)
-- Real-time updates
-- **Auto-configured addresses**
-
----
-
-## 🧪 Testing
-
-The test script automatically loads your .env file:
-
-```bash
-npm run contracts:test
-```
-
-**What it does:**
-1. Reads `.env` file
-2. Loads `SEPOLIA_RPC_URL`
-3. Runs forge test with Sepolia fork
-4. Shows results
-
-**No manual environment setup needed!**
-
----
 
 ## 🐛 Troubleshooting
 
@@ -221,54 +185,7 @@ YOUR Contracts:
 
 Frontend automatically uses YOUR addresses!
 
----
 
-## 🎯 For Evaluators
-
-### Complete Test Run
-
-```bash
-# 1. Setup
-tar -xzf erc4337-complete-monorepo.tar.gz
-cd erc4337-complete-monorepo
-npm run setup
-
-# 2. Configure
-cp .env.example .env
-# Edit .env with YOUR credentials
-
-# 3. Fix NFT version (if needed)
-sed -i 's/pragma solidity \^0.8.27/pragma solidity ^0.8.24/' contracts/src/MyMFERS.sol
-npm run contracts:build
-
-# 4. Test
-npm run contracts:test
-# Expected: 2/2 tests passing ✅
-
-# 5. Deploy
-npm run deploy
-# Expected: Contracts deployed, frontend updated , sometimes contracts are not verified so check manually if deployed, but should be deployed✅
-
-# 6. Run
-npm run dev
-# Expected: Frontend at http://localhost:5173 ✅
-```
-
-**Total time:** ~5 minutes
-
----
-
-## ✅ Success Criteria
-
-After setup, you should see:
-
-- ✅ `npm run contracts:test` - 2/2 passing
-- ✅ `npm run deploy` - Contracts deployed & verified
-- ✅ `npm run dev` - Frontend shows YOUR contract addresses
-- ✅ Can create accounts via UI
-- ✅ Can mint NFTs via UI
-
----
 
 ## 🎓 Project Deliverables
 
@@ -281,39 +198,3 @@ This project demonstrates:
 5. **Integration** - Automatic address synchronization
 6. **Cross-platform** - Works on Windows/Mac/Linux
 
----
-
-## 📝 Important Notes
-
-### Environment Variables
-
-- **Automatically loaded** - No manual `source` or `export` needed
-- **Cross-platform** - Works on all operating systems
-- **Validation** - Scripts check for required variables
-
-### Contract Addresses
-
-- **Your deployment** - Each deployment gets unique addresses
-- **Auto-sync** - Frontend updates automatically
-- **No manual editing** - Everything just works
-
----
-
-## 📄 License
-
-MIT
-
----
-
-**Ready to test?**
-
-```bash
-npm run setup
-cp .env.example .env
-# Edit .env
-npm run contracts:test
-npm run deploy
-npm run dev
-```
-
-Everything loads automatically! 🚀
