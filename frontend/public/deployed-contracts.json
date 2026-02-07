@@ -1,0 +1,11 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contracts": {
+    "factory": "0xfcdcfee9af7e86f945342edb31166c4a81a78877",
+    "paymaster": "0xf158a4723c9b7c230fca113a73d122af70daf0c7",
+    "nft": "0x59a09ba0691fd53d3c973bbbd109ac6eabb851b4",
+    "entrypoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032"
+  },
+  "deployedAt": "2026-02-07T16:54:57.712Z"
+}

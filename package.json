@@ -1,0 +1,17 @@
+{
+  "name": "erc4337-smart-account",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "contracts:build": "cd contracts && forge build",
+    "contracts:test": "node scripts/run-forge-test.js",
+    "contracts:deploy": "node scripts/run-forge-deploy.js",
+    "frontend:install": "cd frontend && npm install",
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "setup": "npm run contracts:install && npm run frontend:install && npm run contracts:build",
+    "contracts:install": "cd contracts && git init && forge install foundry-rs/forge-std && forge install eth-infinitism/account-abstraction@v0.7.0 && forge install OpenZeppelin/openzeppelin-contracts@v5.0.1",
+    "dev": "npm run frontend:dev",
+    "deploy": "npm run contracts:deploy; node scripts/update-deployed-config.js"
+  }
+}
